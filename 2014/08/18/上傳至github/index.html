@@ -4,27 +4,19 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hexo教學 | My thoughts are stars I cannot fathom into constellations</title>
+    <title>利用GITHUB部屬網站 | My thoughts are stars I cannot fathom into constellations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Wally Wang">
     
-    <meta name="description" content="本機環境設定
+    <meta name="description" content="先至GITHUB網站申請帳號。
 
-首先要有node.js。
+建置一個新專案，Repository name 需為github.io結尾。
 
-接著利用命令提示字元 npm install -g hexo 來安裝hexo。
-
-
-安裝node.js教學
-開始使用Hexo
-
-建立hexo
-
-1$ hexo init
+編輯全局配置文件。
 
 
-建立一篇文章，將會是Markdown形式，可以到source/_post/titl">
+123deploy:  type: github  repo: https://github.com/ablactation/ablactation.github">
     
     
     
@@ -81,15 +73,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/08/13/myBlog/" title="Hexo教學" itemprop="url">Hexo教學</a>
+      <a href="/2014/08/18/上傳至github/" title="利用GITHUB部屬網站" itemprop="url">利用GITHUB部屬網站</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Wally Wang">Wally Wang</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-08-13T06:11:53.000Z" itemprop="datePublished">Aug 13 2014</time>
-    Updated:<time datetime="2014-08-13T09:27:32.000Z" itemprop="dateModified">Aug 13 2014</time>
+    <time datetime="2014-08-18T02:37:07.000Z" itemprop="datePublished">Aug 18 2014</time>
+    Updated:<time datetime="2014-08-18T03:02:41.000Z" itemprop="dateModified">Aug 18 2014</time>
     
   </p>
 </header>
@@ -98,39 +90,27 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#本機環境設定"><span class="toc-number">1.</span> <span class="toc-text">本機環境設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#開始使用Hexo"><span class="toc-number">2.</span> <span class="toc-text">開始使用Hexo</span></a></li></ol>
+		
 		</div>
 		
-		<h3 id="本機環境設定"><strong>本機環境設定</strong></h3>
-<ul>
-<li><p>首先要有<a href="http://nodejs.org/" target="_blank" rel="external">node.js</a>。</p>
+		<ul>
+<li><p>先至<a href="https://github.com/" target="_blank" rel="external">GITHUB網站</a>申請帳號。</p>
 </li>
-<li><p>接著利用命令提示字元 npm install -g hexo 來安裝hexo。</p>
+<li><p>建置一個新專案，Repository name 需為<em>github.io</em>結尾。</p>
+</li>
+<li><p>編輯全局配置文件。</p>
 </li>
 </ul>
-<p><a href="http://www.gtwang.org/2013/12/install-node-js-in-windows-mac-os-x-linux.html" target="_blank" rel="external">安裝node.js教學</a></p>
-<h3 id="開始使用Hexo"><strong>開始使用Hexo</strong></h3>
-<ul>
-<li>建立hexo</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: github</div><div class="line">  repo: https://github.com/ablactation/ablactation.github.io.git</div></pre></td></tr></table></figure>
 
 <ul>
-<li>建立一篇文章，將會是<a href="http://markdown.tw/" target="_blank" rel="external">Markdown</a>形式，可以到source/_post/title.md去修改</li>
+<li>透過命令進行部屬。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"title"</span></div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div><div class="line">接著輸入GITHUB的帳號密碼</div></pre></td></tr></table></figure>
 
 <ul>
-<li>生成public檔</li>
+<li>開啟網址<a href="http://ablactation.github.io/" target="_blank" rel="external">ablactation.github.io</a>(Repository name)。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<ul>
-<li>開啟server觀看（預設在<em><a href="http://localhost:4000/" target="_blank" rel="external">localhost:4000</a></em>）</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>Markdown可至此<a href="https://stackedit.io/" target="_blank" rel="external">網站</a>編輯及練習<!---建議使用CHROME--></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -140,7 +120,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2014/08/13/myBlog/" data-title="Hexo教學 | My thoughts are stars I cannot fathom into constellations" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2014/08/18/上傳至github/" data-title="利用GITHUB部屬網站 | My thoughts are stars I cannot fathom into constellations" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -149,14 +129,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/08/18/上傳至github/" title="利用GITHUB部屬網站">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  利用GITHUB部屬網站</span>
+
+<div class="next">
+<a href="/2014/08/13/myBlog/"  title="Hexo教學">
+ <strong>NEXT:</strong><br/> 
+ <span>Hexo教學
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -166,7 +146,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#本機環境設定"><span class="toc-number">1.</span> <span class="toc-text">本機環境設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#開始使用Hexo"><span class="toc-number">2.</span> <span class="toc-text">開始使用Hexo</span></a></li></ol>
+  
   </div>
 
 <div id="asidepart">
